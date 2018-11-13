@@ -13,28 +13,60 @@
     // Add expenditure Button
     // Menu Button
     <LinearLayout
+        android:weightSum="10"
         android:background="#00BFFF"
         android:orientation="horizontal"
         android:id="@+id/LayoutTopMain"
         android:layout_weight="0.8"
         android:layout_width="match_parent"
         android:layout_height="0dp">
+
+        // Button Previous Month
+        <ImageButton
+            android:scaleType="fitEnd"
+            android:background="@null"
+            android:padding="6dp"
+            android:id="@+id/btnPreviousMonthMain"
+            android:src="@drawable/previous_white_icon"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            xmlns:ap
+            android:text="November 2018"
+            android:textStyle="bold"
+            android:textColor="#FFFF00"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_weight="4.5"
+            android:id="@+id/txtMonthYearMain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
     </LinearLayout>
+
+    // Solid white line to seperate 1st and 2nd top
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFF"/>
 
     // Layout 2ndTop of Main Activity include:
     // TextView for 4 information: Earn, Paid, Remain this month, Total availabel
+
     <LinearLayout
         android:id="@+id/Layout2ndTopMain"
-        android:background="#009ACD"
-        android:orientation="horizontal"
-        android:layout_weight="1.3"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
-    </LinearLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        android:background="#009ACD"
+        android:orientation="horizontal"></LinearLayout>
 
     //ListView of information of latest expenditure input
     <ListView
-        android:id="@+id/ListViewLatestExpenditure"
+        android:id="@+id/ListViewLatestExpenditureMain"
         android:layout_weight="17.9"
         android:layout_width="match_parent"
         android:layout_height="0dp"></ListView>
