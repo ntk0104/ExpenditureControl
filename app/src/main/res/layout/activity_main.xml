@@ -13,6 +13,7 @@
     // Add expenditure Button
     // Menu Button
     <LinearLayout
+        xmlns:autofit="http://schemas.android.com/apk/res-auto"
         android:weightSum="10"
         android:background="#00BFFF"
         android:orientation="horizontal"
@@ -23,7 +24,7 @@
 
         // Button Previous Month
         <ImageButton
-            android:scaleType="fitEnd"
+            android:scaleType="fitCenter"
             android:background="@null"
             android:padding="6dp"
             android:id="@+id/btnPreviousMonthMain"
@@ -32,19 +33,65 @@
             android:layout_width="0dp"
             android:layout_height="match_parent" />
 
-        <TextView
-            xmlns:ap
+        //TextView display month and year of result
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/txtMonthYearMain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
             android:text="November 2018"
             android:textStyle="bold"
             android:textColor="#FFFF00"
-            android:textAlignment="center"
             android:gravity="center"
-            android:layout_weight="4.5"
-            android:id="@+id/txtMonthYearMain"
+            android:singleLine="true"
+            android:textSize="40sp"
+            autofit:minTextSize="16sp"
+        />
+
+        // Button Next Month
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:padding="6dp"
+            android:id="@+id/btnNextMonthMain"
+            android:src="@drawable/next_white_icon"
+            android:layout_weight="1.5"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
 
+        // Solid white line to seperate
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#FFFF"/>
 
+        // Button Pay
+        <ImageButton
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:padding="6dp"
+            android:id="@+id/btnPayMain"
+            android:src="@drawable/pay"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        // Solid white line to seperate
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#FFFF"/>
+
+        // Button Setting
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:padding="6dp"
+            android:id="@+id/btnSettingMain"
+            android:src="@drawable/setting_icon_white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
     // Solid white line to seperate 1st and 2nd top
