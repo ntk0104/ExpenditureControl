@@ -35,7 +35,7 @@
 
         //TextView display month and year of result
         <me.grantland.widget.AutofitTextView
-            android:id="@+id/txtMonthYearMain"
+            android:id="@+id/edtMonthYearMain"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4.5"
@@ -94,22 +94,68 @@
             android:layout_height="match_parent" />
     </LinearLayout>
 
+
     // Solid white line to seperate 1st and 2nd top
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#FFFF"/>
 
+
     // Layout 2ndTop of Main Activity include:
     // TextView for 4 information: Earn, Paid, Remain this month, Total availabel
-
     <LinearLayout
+        xmlns:autofit="http://schemas.android.com/apk/res-auto"
         android:id="@+id/Layout2ndTopMain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.3"
+        android:weightSum="10"
         android:background="#009ACD"
-        android:orientation="horizontal"></LinearLayout>
+        android:orientation="horizontal">
+
+        // Layout for Earn part of 2nd Top
+        <LinearLayout
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:weightSum="10"
+            android:orientation="vertical">
+
+            //TextView display "Earned"
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/txtEarnedMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:text="Earned"
+                android:textColor="#FFFF"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="22sp"
+                autofit:minTextSize="16sp"
+            />
+
+            //TextView display earned of this month
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/edtEarnedMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:text="1000"
+                android:textColor="#FFFF"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="40sp"
+                autofit:minTextSize="16sp"
+            />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
     //ListView of information of latest expenditure input
     <ListView
