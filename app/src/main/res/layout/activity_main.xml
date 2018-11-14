@@ -128,10 +128,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="4"
-                android:text="Earned"
-                android:textColor="#FFFF"
                 android:gravity="center"
                 android:singleLine="true"
+                android:text="Earned"
+                android:textColor="#FFFF"
                 android:textSize="22sp"
                 autofit:minTextSize="16sp"
             />
@@ -146,12 +146,145 @@
                 android:textColor="#FFFF"
                 android:gravity="center"
                 android:singleLine="true"
-                android:textSize="40sp"
+                android:textSize="25sp"
                 autofit:minTextSize="16sp"
             />
 
+        </LinearLayout>
+
+        //solid line seperate Earned and Paid
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#FFFF"/>
+
+        // Layout for Paid part of 2nd Top
+        <LinearLayout
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:weightSum="10"
+            android:orientation="vertical">
+
+            //TextView display "Paid"
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/txtPaidMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:text="Paid"
+                android:textColor="#FFFF"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="22sp"
+                autofit:minTextSize="16sp"
+            />
+
+            //TextView display paid of this month
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/edtPaidMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:text="600"
+                android:textColor="#FFFF"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="25sp"
+                autofit:minTextSize="16sp"
+            />
 
         </LinearLayout>
+
+        //solid line seperate Earned and Paid
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#FFFF"/>
+
+        // Layout for Remaining part of 2nd Top
+        <LinearLayout
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:weightSum="10"
+            android:orientation="vertical">
+
+            //TextView display "Paid"
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/txtRemainingMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:text="Remaining"
+                android:textColor="#FFFF"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="22sp"
+                autofit:minTextSize="16sp"
+            />
+
+            //TextView display paid of this month
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/edtRemainingMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:text="400"
+                android:textColor="#FFFF"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="25sp"
+                autofit:minTextSize="16sp"
+            />
+
+        </LinearLayout>
+
+        //solid line seperate Earned and Paid
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#FFFF"/>
+
+        // Layout for Total part of 2nd Top
+        <LinearLayout
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:weightSum="10"
+            android:orientation="vertical">
+
+            //TextView display "Paid"
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/txtTotalMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:text="Total"
+                android:textColor="#FFFF"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="22sp"
+                autofit:minTextSize="16sp"
+            />
+
+            //TextView display paid of this month
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/edtTotalMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:text="400"
+                android:textColor="#FFFF"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="25sp"
+                autofit:minTextSize="16sp"
+            />
+
+        </LinearLayout>
+
+
 
 
     </LinearLayout>
