@@ -24,6 +24,7 @@
 
         // Button Previous Month
         <ImageButton
+            android:onClick="GoPreviousMonth"
             android:scaleType="fitCenter"
             android:background="@null"
             android:padding="6dp"
@@ -50,6 +51,7 @@
 
         // Button Next Month
         <ImageButton
+            android:onClick="GoNextMonth"
             android:scaleType="fitCenter"
             android:background="@null"
             android:padding="6dp"
@@ -67,10 +69,11 @@
 
         // Button Pay
         <ImageButton
+            android:onClick="AddNewExpenditure"
             android:scaleType="centerInside"
             android:background="@null"
             android:padding="6dp"
-            android:id="@+id/btnPayMain"
+            android:id="@+id/btnAddExpenditureM"
             android:src="@drawable/pay"
             android:layout_weight="1.5"
             android:layout_width="0dp"
@@ -84,10 +87,11 @@
 
         // Button Setting
         <ImageButton
+            android:onClick="OpenSettingDialog"
             android:scaleType="fitCenter"
             android:background="@null"
             android:padding="6dp"
-            android:id="@+id/btnSettingMain"
+            android:id="@+id/btnMoreSettingMain"
             android:src="@drawable/setting_icon_white"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -226,7 +230,7 @@
 
             //TextView display paid of this month
             <me.grantland.widget.AutofitTextView
-                android:id="@+id/edtRemainingMain"
+                android:id="@+id/edtMonthRemainingMain"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="6"
