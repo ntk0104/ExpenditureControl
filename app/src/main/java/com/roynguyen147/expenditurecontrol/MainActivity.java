@@ -27,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         
         AnhXa();
+        database.createDBForTheFirstTime();
+//        database.addNewGroup("Test");
+//        database.addNewGroup("Dau tu mao hiem");
+//        database.addNewGroup("Thu nhap thu dong");
+//        database.addNewGroup("Giao duc");
+//        database.addNewGroup("Ho Tro Nguoi Than");
+//        database.addNewGroup("Tu thien");
+
 
     }
 

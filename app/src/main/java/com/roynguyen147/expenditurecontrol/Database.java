@@ -32,4 +32,15 @@ public class Database extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+    public void createDBForTheFirstTime(){
+        // Create table Group if its not exists
+        String group_creation_sql = "CREATE TABLE IF NOT EXISTS group_expenditure(id INTEGER PRIMARY KEY AUTOINCREMENT, title VARCHAR(200) NOT NULL)";
+        QueryData(group_creation_sql);
+    }
+
+    public void addNewGroup(String new_group_title){
+        String add_new_group_sql = "INSERT INTO group_expenditure VALUES(null, '" + new_group_title + "')";
+        QueryData(add_new_group_sql);
+    }
 }
