@@ -48,6 +48,32 @@ public class Database extends SQLiteOpenHelper {
 
             QueryData(group_creation_sql);
             // Create table group_expenditure successfully
+
+            //Create table Category if its not exists
+            String category_creation_sql = "CREATE TABLE IF NOT EXISTS `category_expenditure` (\n" +
+                    "\t`id`\tINTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,\n" +
+                    "\t`title`\tTEXT NOT NULL UNIQUE,\n" +
+                    "\t`group_id`\tINTEGER NOT NULL,\n" +
+                    "\tFOREIGN KEY(`group_id`) REFERENCES `group_expenditure`(`id`)\n" +
+                    ");";
+            QueryData(category_creation_sql);
+
+            // Create table Category successfully
+
+            //Create table Expenditure if its not exists
+            String expenditure_creation_sql = " CREATE TABLE `expenditure` (\n" +
+                    "\t`id`\tINTEGER NOT NULL,\n" +
+                    "\t`title`\tTEXT,\n" +
+                    "\t`time`\tTEXT NOT NULL,\n" +
+                    "\t`money`\tINTEGER NOT NULL,\n" +
+                    "\t`type`\tINTEGER NOT NULL,\n" +
+                    "\t`category_id`\tINTEGER NOT NULL,\n" +
+                    "                    FOREIGN KEY(`category_id`) REFERENCES `category_expenditure`(`id`)\n" +
+                    ");";
+            QueryData(expenditure_creation_sql);
+
+            // Create table Expenditure successfully
+
             return true;
         }catch (Exception e){
             // Create table group_expenditure failed
@@ -83,4 +109,22 @@ public class Database extends SQLiteOpenHelper {
         }
 
     }
+
+    // Update the group of expenditure
+    public boolean UpdateGroup(String group_title, String new_title_group){
+        try {
+            String update_group_sql = "UPDATE group_expenditure SET title = '"+ new_title_group +"' WHERE title = '" + group_title + "'";
+            QueryData(update_group_sql);
+            // Update group of expenditure successfully
+            return true;
+        }catch (Exception e){
+            // Update new group of expenditure failed
+            return false;
+        }
+
+    }
+
+    // Create category for expenditure
+
+
 }
