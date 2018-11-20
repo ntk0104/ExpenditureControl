@@ -28,12 +28,17 @@ public class MainActivity extends AppCompatActivity {
         
         AnhXa();
         database.createDBForTheFirstTime();
-        boolean check_update = database.UpdateGroup("Test", "Kiet");
-//        boolean check_insert = database.addNewGroup("Test1");
-//        boolean check_insert2 = database.addNewGroup("Test2");
+//        boolean check_insert = database.addNewGroup("Nhu Cau Thiet Yeu");
+//        boolean check_insert2 = database.addNewGroup("Quan he");
+//        boolean check_insert3 = database.addNewGroup("Tu thien");
+//        boolean check_insert4 = database.addNewCategory("An sang", 1);
+//        boolean check_insert5 = database.addNewCategory("An trua", 1);
+//        boolean check_insert6 = database.addNewCategory("An toi", 1);
+//        boolean check_insert7 = database.addNewCategory("Nhau nhet", 2);
 //        boolean check_delete = database.DeleteGroup("Test1");
 
-//        Toast.makeText(this, check_insert + " ", Toast.LENGTH_SHORT).show();
+        boolean check_delete1 = database.DeleteCategory("An sang");
+        Toast.makeText(this, check_delete1 + " ", Toast.LENGTH_SHORT).show();
 //        database.addNewGroup("Test");
 //        database.addNewGroup("Dau tu mao hiem");
 //        database.addNewGroup("Thu nhap thu dong");

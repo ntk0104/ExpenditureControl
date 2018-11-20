@@ -125,6 +125,31 @@ public class Database extends SQLiteOpenHelper {
     }
 
     // Create category for expenditure
+    public boolean addNewCategory(String category_title, int group_id){
+        try {
+            String add_new_category_sql = "INSERT INTO category_expenditure VALUES(null, '" + category_title + "', " + group_id + ")";
+            QueryData(add_new_category_sql);
+            // Create new category of expenditure successfully
+            return true;
+        }catch (Exception e){
+            // Create new category of expenditure failed
+            return false;
+        }
 
+    }
+
+    // Delete the category of expenditure
+    public boolean DeleteCategory(String category_title){
+        try {
+            String add_new_group_sql = "DELETE FROM `category_expenditure` WHERE `title` = '" + category_title + "';";
+            QueryData(add_new_group_sql);
+            // Delete category of expenditure successfully
+            return true;
+        }catch (Exception e){
+            // Delete category of expenditure failed
+            return false;
+        }
+
+    }
 
 }
