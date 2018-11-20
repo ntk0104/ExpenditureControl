@@ -31,14 +31,17 @@ public class MainActivity extends AppCompatActivity {
 //        boolean check_insert = database.addNewGroup("Nhu Cau Thiet Yeu");
 //        boolean check_insert2 = database.addNewGroup("Quan he");
 //        boolean check_insert3 = database.addNewGroup("Tu thien");
-//        boolean check_insert4 = database.addNewCategory("An sang", 1);
-//        boolean check_insert5 = database.addNewCategory("An trua", 1);
-//        boolean check_insert6 = database.addNewCategory("An toi", 1);
-//        boolean check_insert7 = database.addNewCategory("Nhau nhet", 2);
+//        boolean check_insert4 = database.addNewCategory("An sang", 5);
+//        boolean check_insert5 = database.addNewCategory("An trua", 5);
+//        boolean check_insert6 = database.addNewCategory("An toi", 5);
+//        boolean check_insert7 = database.addNewCategory("Nhau nhet", 6);
 //        boolean check_delete = database.DeleteGroup("Test1");
+//        boolean check_delete1 = database.DeleteGroup("Test2");
+//        boolean check_delete2 = database.DeleteGroup("Kiet");
+        boolean check_update_category = database.UpdateCategory("An choi sa doa", "An sang");
 
-        boolean check_delete1 = database.DeleteCategory("An sang");
-        Toast.makeText(this, check_delete1 + " ", Toast.LENGTH_SHORT).show();
+//        boolean check_delete1 = database.DeleteCategory("An sang");
+        Toast.makeText(this, check_update_category + " ", Toast.LENGTH_SHORT).show();
 //        database.addNewGroup("Test");
 //        database.addNewGroup("Dau tu mao hiem");
 //        database.addNewGroup("Thu nhap thu dong");

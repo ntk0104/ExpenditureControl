@@ -152,4 +152,18 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
+    // Update the expenditure
+    public boolean UpdateCategory(String new_category_title, String old_category_title){
+        try {
+            String update_category_sql = "UPDATE category_expenditure SET title = '"+ new_category_title +"' WHERE title = '" + old_category_title + "'";
+            QueryData(update_category_sql);
+            // Update expenditure successfully
+            return true;
+        }catch (Exception e){
+            // Update expenditure failed
+            return false;
+        }
+
+    }
+
 }
